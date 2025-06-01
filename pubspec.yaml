@@ -7,9 +7,6 @@ environment:
   sdk: ">=3.0.0 < 4.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-
   # Architecture
   either_plus: ^2.0.1
   cout: ^1.0.0
