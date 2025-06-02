@@ -5,8 +5,8 @@ import 'package:try_plus/src/errors.dart' show TryError;
 final class Try {
   const Try._();
 
-  static Either<TryError, T?> run<T>(
-    T? Function() call, {
+  static Either<TryError, T> run<T>(
+    T Function() call, {
     bool showExceptions = true,
   }) {
     try {
@@ -20,8 +20,8 @@ final class Try {
     }
   }
 
-  static Future<Either<TryError, T?>> runAsync<T>(
-    Future<T?> Function() call, {
+  static Future<Either<TryError, T>> runAsync<T>(
+    Future<T> Function() call, {
     bool showExceptions = true,
   }) async {
     try {
