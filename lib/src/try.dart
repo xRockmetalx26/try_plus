@@ -1,12 +1,14 @@
 import 'package:cout/cout.dart' show Cout;
-import 'package:either_plus/either_plus.dart'
-    show EValue, Error, FEValue, Value;
+import 'package:either_plus/either_plus.dart' show Either, Error, Value;
 import 'package:try_plus/src/errors.dart' show TryError;
 
 final class Try {
   const Try._();
 
-  static EValue<T?> run<T>(T? Function() call, {bool showExceptions = true}) {
+  static Either<TryError, T?> run<T>(
+    T? Function() call, {
+    bool showExceptions = true,
+  }) {
     try {
       final value = call();
       return Value(value);
@@ -18,7 +20,7 @@ final class Try {
     }
   }
 
-  static FEValue<T?> runAsync<T>(
+  static Future<Either<TryError, T?>> runAsync<T>(
     Future<T?> Function() call, {
     bool showExceptions = true,
   }) async {
