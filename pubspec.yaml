@@ -1,6 +1,6 @@
 name: try_plus
 description: Try for Dart.
-version: 1.0.5
+version: 1.0.6
 repository: https://github.com/xRockmetalx26/try_plus
 
 environment:
@@ -8,5 +8,5 @@ environment:
 
 dependencies:
   # Architecture
-  either_plus: ^2.0.7
+  either_plus: ^2.0.8
   cout: ^1.0.2
