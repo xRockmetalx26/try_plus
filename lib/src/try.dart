@@ -15,7 +15,7 @@ final class Try {
     } catch (exception, trace) {
       if (showExceptions) Cout.error('$exception\n$trace');
 
-      final error = TryError(exception.toString(), exception);
+      final error = TryError(exception.toString(), exception: exception);
       return Error(error);
     }
   }
@@ -30,7 +30,7 @@ final class Try {
     } catch (exception, trace) {
       if (showExceptions) Cout.error('$exception\n$trace');
 
-      final error = TryError(exception.toString(), exception);
+      final error = TryError(exception.toString(), exception: exception);
       return Error(error);
     }
   }
