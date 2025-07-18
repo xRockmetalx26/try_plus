@@ -4,5 +4,5 @@ Add to pubspec.yml:
 
 ```
 dependencies:
-  try_plus: ^1.0.6 // latest package version
+  try_plus: ^1.0.7 // latest package version
 ```
